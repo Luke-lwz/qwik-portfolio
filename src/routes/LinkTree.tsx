@@ -15,15 +15,13 @@ export default component$(() => {
 
     const scrolling = $(() => {
         const view = document.getElementById("link-view");
-        const stars = document.getElementById("stars");
         const stars2 = document.getElementById("stars2");
         const stars3 = document.getElementById("stars3");
         const top = view?.scrollTop || 0;
 
-        if (!stars || !stars2 || !stars3) return
+        if (!stars2 || !stars3) return
 
 
-        stars.style.marginBottom = "-" + (top / 5) + "px";
         stars2.style.marginBottom = "-" + (top / 50) + "px";
         stars3.style.marginBottom = "-" + (top / 500) + "px";
 
@@ -33,7 +31,6 @@ export default component$(() => {
     return (
         <div class={"star-bg absolute inset-0"}>
 
-            <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
 
@@ -48,7 +45,7 @@ export default component$(() => {
                     <h3 class={"text-xl font-semibold text-center -mt-2"}>
                         soli deo gloria.
                     </h3>
-                    
+
                 </div>
 
             </div>
