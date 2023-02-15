@@ -44,7 +44,7 @@ export default component$(() => {
     return (
         <div class={"star-bg absolute inset-0"}>
 
-<div id="stars2-c>
+<div id="stars2-c">
             <div id="stars2"></div>
 </div>
 <div id="stars3-c">
