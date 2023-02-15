@@ -41,6 +41,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
-    "daisyui": "^2.50.1"
+    "daisyui": "^2.50.1",
+    "lucide-qwik": "^1.0.0"
   }
 }

@@ -4,11 +4,24 @@ import { component$, $ } from '@builder.io/qwik';
 import links from "../content/LinkTree/links.json";
 
 
+
+
+
 // components
 import { Pfp } from '~/components/Pfp';
 
 
 import './Stars.css';
+import { Link } from '~/components/linktree';
+
+
+
+import { FishIcon } from '~/components/icons/icons';
+
+
+
+
+
 
 
 export default component$(() => {
@@ -34,7 +47,13 @@ export default component$(() => {
             <div id="stars2"></div>
             <div id="stars3"></div>
 
+
+
             <div onScroll$={scrolling} id="link-view" class={"absolute inset-0 z-10 flex flex-col items-center overflow-y-scroll scrollbar-hide "}>
+                <div class={"h-12 w-12 absolute top-2 left-4"}>
+
+                    <FishIcon />
+                </div>
                 <div id="content-area" class={"w-full max-w-2xl flex flex-col items-center p-4 gap-4 h-fit"}>
                     <div class={"h-28 w-28 mt-16"}>
                         <Pfp />
@@ -46,7 +65,25 @@ export default component$(() => {
                         soli deo gloria.
                     </h3>
 
+                    <div class={"flex flex-col items-center w-full mt-4"}>
+                        {links.map((group, i) => {
+                            return (
+                                <div key={i} class={"w-full flex flex-col items-center gap-4"}>
+                                    {group?.links?.map(link => <Link key={link.name} {...link} />)}
+                                </div>
+                            )
+                        })}
+                    </div>
+
+
+
                 </div>
+
+
+
+
+
+
 
             </div>
 

@@ -24,6 +24,17 @@ body::-webkit-scrollbar {
 }
 
 
+.clickable {
+  transition: all;
+  transition: 100ms;
+}
+
+.clickable:active:hover,
+  .clickable:active:focus {
+    transform: scale(0.95, 0.95);
+    transition: 100ms;
+}
+
 
 .btn {
   @apply normal-case
