@@ -28,15 +28,15 @@ export default component$(() => {
 
     const scrolling = $(() => {
         const view = document.getElementById("link-view");
-        const stars2 = document.getElementById("stars2");
-        const stars3 = document.getElementById("stars3");
+        const stars2 = document.getElementById("stars2-c");
+        const stars3 = document.getElementById("stars3-c");
         const top = view?.scrollTop || 0;
 
         if (!stars2 || !stars3) return
 
 
         stars2.style.marginBottom = "-" + (top / 5) + "px";
-        stars3.style.marginBottom = "-" + (top / 10) + "px";
+        stars3.style.marginBottom = "-" + (top / 5) + "px";
 
 
     })
@@ -44,12 +44,16 @@ export default component$(() => {
     return (
         <div class={"star-bg absolute inset-0"}>
 
+<div id="stars2-c>
             <div id="stars2"></div>
+</div>
+<div id="stars3-c">
             <div id="stars3"></div>
+</div>
 
 
 
-            <div onScroll$={scrolling} id="link-view" class={"absolute inset-0 z-10 flex flex-col items-center overflow-y-scroll scrollbar-hide mb-32 "}>
+            <div onScroll$={scrolling} id="link-view" class={"absolute inset-0 z-10 flex flex-col items-center overflow-y-scroll scrollbar-hide pb-32 "}>
                 <div class={"h-12 w-12 absolute top-2 left-4"}>
 
                     <FishIcon />
