@@ -35,8 +35,8 @@ export default component$(() => {
         if (!stars2 || !stars3) return
 
 
-        stars2.style.marginBottom = "-" + (top / 50) + "px";
-        stars3.style.marginBottom = "-" + (top / 500) + "px";
+        stars2.style.marginBottom = "-" + (top / 5) + "px";
+        stars3.style.marginBottom = "-" + (top / 10) + "px";
 
 
     })
@@ -49,7 +49,7 @@ export default component$(() => {
 
 
 
-            <div onScroll$={scrolling} id="link-view" class={"absolute inset-0 z-10 flex flex-col items-center overflow-y-scroll scrollbar-hide "}>
+            <div onScroll$={scrolling} id="link-view" class={"absolute inset-0 z-10 flex flex-col items-center overflow-y-scroll scrollbar-hide mb-32 "}>
                 <div class={"h-12 w-12 absolute top-2 left-4"}>
 
                     <FishIcon />
