@@ -3,12 +3,17 @@
         "name": "Social Media",
         "links": [
             {
+                "name": "Youth" ,
+                "href": "https://www.instagram.com/icfyouthkarlsruhe/",
+                "icon": "heart"
+            },
+            {
                 "name": "Instagram" ,
                 "href": "https://www.instagram.com/luggas.lwz/",
                 "icon": "instagram"
             },
             {
-                "name": "Git Hub" ,
+                "name": "GitHub" ,
                 "href": "https://github.com/Luke-lwz",
                 "icon": "github"
             },
