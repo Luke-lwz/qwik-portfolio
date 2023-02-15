@@ -3,7 +3,7 @@ import { component$ } from '@builder.io/qwik';
 
 
 // Icons
-import { LinkIcon, InstagramIcon, GithubIcon } from 'lucide-qwik';
+import { LinkIcon, InstagramIcon, GithubIcon, HeadphonesIcon } from 'lucide-qwik';
 
 
 export function getIcon(icon?: string) {
@@ -12,6 +12,8 @@ export function getIcon(icon?: string) {
             return <InstagramIcon />
         case "github":
             return <GithubIcon />
+            case "spotify":
+            return <HeadphonesIcon />
         default:
             return <LinkIcon />
     }

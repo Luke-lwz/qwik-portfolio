@@ -14,7 +14,8 @@
             },
             {
                 "name": "Spotify" ,
-                "href": "https://open.spotify.com/user/yy6l91lacs7jsi4d82x4cxlu3?si=d90dc7874fe44941"
+                "href": "https://open.spotify.com/user/yy6l91lacs7jsi4d82x4cxlu3?si=d90dc7874fe44941",
+                "icon": "spotify"
             }
         ]
     }
