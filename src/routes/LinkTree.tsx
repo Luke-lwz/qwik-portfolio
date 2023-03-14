@@ -1,4 +1,4 @@
-import { component$, $ } from '@builder.io/qwik';
+import { component$, $, useSignal, useTask$ } from '@builder.io/qwik';
 
 
 import links from "../content/LinkTree/links.json";
@@ -20,11 +20,29 @@ import { FishIcon } from '~/components/icons/icons';
 
 
 
+export const stati = [
+    "Soli Deo Gloria",
+    "Solus Christus",
+    "Sola Fide",
+    "Sola Scriptura",
+    "Sola Gratia",
+    "👌 Reingeguckt :()",
+    "Lit!",
+    "Jesus ist das Lamm, aber trotzdem ist er G.O.A.T",
+]
 
 
+export function rng(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
 
 export default component$(() => {
+
+
+    const status = useSignal("Soli Deo Gloria")
 
     const scrolling = $(() => {
         const view = document.getElementById("link-view");
@@ -41,15 +59,30 @@ export default component$(() => {
 
     })
 
+    useTask$(() => {
+        changeStatus()
+
+
+        function changeStatus() {
+
+            status.value = stati[rng(0, stati.length)]
+        }
+    })
+
+
+
+
+    
+
     return (
         <div class={"star-bg absolute inset-0"}>
 
-<div id="stars2-c">
-            <div id="stars2"></div>
-</div>
-<div id="stars3-c">
-            <div id="stars3"></div>
-</div>
+            <div id="stars2-c">
+                <div id="stars2"></div>
+            </div>
+            <div id="stars3-c">
+                <div id="stars3"></div>
+            </div>
 
 
 
@@ -66,7 +99,7 @@ export default component$(() => {
                         Lukas
                     </h1>
                     <h3 class={"text-xl font-semibold text-center -mt-2"}>
-                        soli deo gloria.
+                        {status.value ? status.value : "Soli Deo Gloria"}
                     </h3>
 
                     <div class={"flex flex-col items-center w-full mt-4"}>
