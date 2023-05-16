@@ -102,6 +102,8 @@ export default component$(() => {
                         {status.value ? status.value : "Soli Deo Gloria"}
                     </h3>
 
+                    <h1 class={"text-2xl text-white w-full text-left font-extrabold "}>Project</h1>
+
                     <a href='https://playkaboom.com' target='_blank' class={"w-full h-44 rounded-2xl bg-white flex justify-start items-center overflow-hidden"}>
                         <div class={"h-full overflow-hidden relative w-32 min-w-[8rem] "}>
                             <div class={"inset-shadow z-10"} />
@@ -109,7 +111,7 @@ export default component$(() => {
                         </div>
 
                         <div class={"flex flex-col items-start justify-start h-full p-3 max-w-max w-full"}>
-                            <h1 class={"text-primary font-extrabold text-lg sm:text-xl underline "}>Playkaboom.com</h1>
+                            <h1 class={"text-primary font-extrabold text-xl sm:text-2xl "}>KABOOM</h1>
                             <p class={"break-words shrink h-full text-black text-sm sm:text-base sm:font-semibold"}>An online adaptation of the popular card game <span class={"text-primary"}>Two Rooms and a Boom&trade;</span>.<br />Built with Preact and PeerJS </p>
                         </div>
                     </a>
