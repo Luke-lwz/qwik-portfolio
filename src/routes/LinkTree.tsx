@@ -102,7 +102,7 @@ export default component$(() => {
                         {status.value ? status.value : "Soli Deo Gloria"}
                     </h3>
 
-                    <a href='https://playkaboom.com' target='_blank' class={"w-full h-44 rounded-3xl bg-white flex justify-start items-center overflow-hidden"}>
+                    <a href='https://playkaboom.com' target='_blank' class={"w-full h-44 rounded-2xl bg-white flex justify-start items-center overflow-hidden"}>
                         <div class={"h-full overflow-hidden relative w-32 min-w-[8rem] "}>
                             <div class={"inset-shadow z-10"} />
                             <img width={"8rem"} class={"h-full w-32 self-center image-full"} src="/kaboomthumbnail.png" alt="" />
