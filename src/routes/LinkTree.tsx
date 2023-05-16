@@ -96,16 +96,28 @@ export default component$(() => {
                         <Pfp />
                     </div>
                     <h1 class={"text-3xl font-bold text-center"}>
-                        Lukas
+                        Lukas Lunkwitz
                     </h1>
                     <h3 class={"text-xl font-semibold text-center -mt-2"}>
                         {status.value ? status.value : "Soli Deo Gloria"}
                     </h3>
 
+                    <a href='https://playkaboom.com' target='_blank' class={"w-full h-44 rounded-3xl bg-white flex justify-start items-center overflow-hidden"}>
+                        <div class={"h-full overflow-hidden relative w-32 min-w-[8rem] "}>
+                            <div class={"inset-shadow z-10"} />
+                            <img width={"8rem"} class={"h-full w-32 self-center image-full"} src="/kaboomthumbnail.png" alt="" />
+                        </div>
+
+                        <div class={"flex flex-col items-start justify-start h-full p-3 max-w-max w-full"}>
+                            <h1 class={"text-primary font-extrabold text-lg sm:text-xl underline "}>Playkaboom.com</h1>
+                            <p class={"break-words shrink h-full text-black text-sm sm:text-base sm:font-semibold"}>An online adaptation of the popular card game <span class={"text-primary"}>Two Rooms and a Boom&trade;</span>.<br />Built with Preact and PeerJS </p>
+                        </div>
+                    </a>
+
                     <div class={"flex flex-col items-center w-full mt-4"}>
                         {links.map((group, i) => {
                             return (
-                                <div key={i} class={"w-full flex flex-col items-center gap-4"}>
+                                <div key={i} class={"clickable w-full flex flex-col items-center gap-4"}>
                                     {group?.links?.map(link => <Link key={link.name} {...link} />)}
                                 </div>
                             )
